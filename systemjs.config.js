@@ -9,6 +9,7 @@
     'app':                        'app', // 'dist',
 
     '@angular':                   'node_modules/@angular',
+    'angular2-google-maps':       'https://npmcdn.com/angular2-google-maps@0.12.0',
     'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
     'rxjs':                       'node_modules/rxjs'
   };
@@ -18,6 +19,7 @@
     'app':                        { main: 'main.js',  defaultExtension: 'js' },
     'rxjs':                       { defaultExtension: 'js' },
     'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' },
+    'angular2-google-maps/core':  { main: 'index.js', defaultExtension: 'js' }
   };
 
   var ngPackageNames = [
