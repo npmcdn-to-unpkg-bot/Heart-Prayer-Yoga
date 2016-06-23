@@ -104,7 +104,7 @@ interface marker {
 	lat: number;
 	lng: number;
 	label?: string;
-	draggable: boolean;
+	draggable?: boolean;
 }
 
 // ANGULAR2_GOOGLE_MAPS_PROVIDERS is required here
