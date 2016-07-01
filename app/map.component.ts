@@ -7,8 +7,9 @@ import {
   MapsAPILoader,
   NoOpMapsAPILoader,
   MouseEvent,
-  GOOGLE_MAPS_DIRECTIVES
+  GOOGLE_MAPS_DIRECTIVES,
 } from 'angular2-google-maps/core';
+
 
 
 @Component({
@@ -16,7 +17,8 @@ import {
   directives: [GOOGLE_MAPS_DIRECTIVES],
   styles: [`
     .sebm-google-map-container {
-       height: 300px;
+       width: 90%;
+       height: 250px;
      }
   `],
   template: `
@@ -43,33 +45,18 @@ import {
 
       </sebm-google-map-marker>
 
-      <sebm-google-map-circle [latitude]="lat + 0.3" [longitude]="lng"
-          [radius]="5000"
-          [fillColor]="'red'"
-          [circleDraggable]="true"
-          [editable]="true">
-      </sebm-google-map-circle>
-
     </sebm-google-map>
 `})
 export class MapComponent {
   // google maps zoom level
-  zoom: number = 8;
+  zoom: number = 14;
 
   // initial center position for the map
-  lat: number = 51.673858;
-  lng: number = 7.815982;
+  lat: number = 38.000034;
+  lng: number = -122.522727;
 
   clickedMarker(label: string, index: number) {
-    console.log(`clicked the marker: ${label || index}`)
-  }
-
-  mapClicked($event: MouseEvent) {
-    this.markers.push({
-      lat: $event.coords.lat,
-      lng: $event.coords.lng,
-		  draggable: false
-    });
+    window.location.href = 'https://www.google.com/maps/place/Osher+Marin+JCC/@38.000043,-122.5232282,19z/data=!3m1!4b1!4m5!3m4!1s0x808599cef09f3d6d:0xce9bbc4fbe67e9!8m2!3d38.000043!4d-122.522681'
   }
 
   markerDragEnd(m: marker, $event: MouseEvent) {
@@ -78,23 +65,10 @@ export class MapComponent {
 
   markers: marker[] = [
 	  {
-		  lat: 51.673858,
-		  lng: 7.815982,
-		  label: 'A',
-		  draggable: true
-	  },
-	  {
-		  lat: 51.373858,
-		  lng: 7.215982,
-		  label: 'B',
+		  lat: 38.000034,
+		  lng: -122.522727,
 		  draggable: false
-	  },
-	  {
-		  lat: 51.723858,
-		  lng: 7.895982,
-		  label: 'C',
-		  draggable: true
-	  }
+	}
   ]
 }
 // just an interface for type safety.

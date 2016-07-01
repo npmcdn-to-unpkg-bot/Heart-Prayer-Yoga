@@ -1,0 +1,67 @@
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    position: fixed;
+    top:0;
+}
+
+#navbar li {
+  float:left;
+}
+
+#navbar li a {
+    display: block;
+    color: #333;
+    text-align: center;
+    padding: 1em 1em 1em 1em;
+    text-decoration: none;
+}
+
+#navbar li a:hover {
+    background-color: #555;
+}
+
+#header {
+  color: white;
+  font-size: 250%;
+  margin-left: 10%;
+  padding-top: 1%;
+}
+
+#top-image {
+  background-image: url(../../assets/img/hands.jpg);
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+}
+
+#middle-image{
+  background-image: url(../../assets/img/redwoods.jpg);
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  color: black;
+}
+
+#middle-image  h2, p {
+  margin-left: 5%;
+  color: white;
+}
+
+#bottom-image {
+  color: white;
+  background-image: url(../../assets/img/plant.jpg);
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+}
+
+#bottom-image p, ul {
+  margin-left: 5%;
+}
+
+#bottom-image ul {
+  list-style-type: none;
+}
